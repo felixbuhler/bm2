@@ -25,7 +25,10 @@
     --color-black: #141414;
     --color-black-hover: #2d2d2d;
 
+    --color-neon: #eeff00;
+
     --font-sans: "Inter", sans-serif;
+    --font-headline: "mono45-headline", monospace;
 
     --font-size-headline: 3.5vmin;
     --font-size-copy: 2vmin;
@@ -47,11 +50,19 @@ html {
 
 h2 {
     font-size: var(--font-size-headline);
+    font-family: var(--font-headline);
+    letter-spacing: 0.5px;
     font-weight: normal;
     display: flex;
     justify-content: space-between;
     padding: 0 var(--gallery-gap);
     font-weight: bold;
+}
+
+h3 {
+    font-weight: normal;
+    font-family: var(--font-headline);
+    letter-spacing: 1px;
 }
 
 .button {
@@ -61,6 +72,8 @@ h2 {
     border-radius: 100px;
     color: var(--color-white);
     font-size: var(--font-size-ui);
+    font-family: var(--font-sans);
+    letter-spacing: 0;
     font-weight: normal;
     transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.27);
     scale: 1;
@@ -74,12 +87,12 @@ h2 {
 
 #intro {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 
 }
 
 #intro-typo {
-    height: 100%;
+    height: 100vh;
     background: green;
     margin: 0 auto;
     background: url(intro-typo-01.svg);
@@ -107,6 +120,20 @@ h2 {
     line-height: 0.8em;
 }
 
+#claim {
+    padding: var(--gallery-gap);
+    text-align: center;
+    font-size: 3em;
+    display: block;
+}
+
+#claim span {
+    padding: var(--padding);
+    border: 0.1em solid var(--color-black);
+    border-radius: 30px;
+
+}
+
 /* Hero Image */
 
 #hero-image {
@@ -116,7 +143,7 @@ h2 {
 }
 
 #hero-image .image {
-    background: url(https://images.unsplash.com/photo-1592036160420-8e862f871b00?q=80&w=4740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background: url(image.jpg);
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -139,11 +166,22 @@ p.text-content {
     line-height: 1.5em;
 }
 
+p.text-content svg {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--gallery-gap);
+    fill: var(--color-black);
+    display: block;
+    position: relative;
+}
+
 /* Gallery */
 
 #posters h2 {
     position: sticky;
-    top: var(--gallery-gap); z-index: 9;
+    top: var(--gallery-gap);
+    z-index: 9;
 }
 
 #gallery {
@@ -154,11 +192,12 @@ p.text-content {
 }
 
 #gallery .artwork {
-    background: url(BM2_Gegen_Rechts_01_240516.png);
-    outline: 1px solid black;
+    background: var(--background), var(--color-neon);
     aspect-ratio: 210 / 297;
     transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.27);
     background-size: contain;
+    border-radius: 3px;
+    overflow: hidden;
 }
 
 #gallery .artwork:nth-child(2n) {
@@ -181,6 +220,8 @@ p.text-content {
 
 #gallery .artwork:hover {
     rotate: 0deg;
+    scale: 1.1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 #gallery .artwork a {
@@ -225,8 +266,11 @@ p.text-content {
 
 /* More */
 
+
+
 #more {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: var(--gallery-gap);
     gap: var(--gallery-gap);
     align-items: stretch;
@@ -237,8 +281,55 @@ p.text-content {
     background: rgba(0, 0, 0, 0.05);
     flex: 1;
     padding: var(--gallery-gap);
+    border-radius: 3px;
 }
 
 .box h2 {
     padding: 0;
+    margin-bottom: var(--padding);
+}
+
+#instructions {
+    grid-column: 1 / 3;
+}
+
+.instructions {
+    display: flex;
+    gap: 100px;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.instructions-column {
+    flex: 1 1 0;
+}
+
+.instructions-column h3 {
+    margin-bottom: var(--gallery-gap);
+}
+
+.instructions-image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: var(--gallery-gap);
+}
+
+.instructions-image svg {
+    height: 100%;
+    width: 100%;
+}
+
+.instructions-image svg * {
+    stroke-width: 1px !important;
+    stroke-linecap: round !important;
+    stroke: var(--color-black);
+    fill: none;
+    vector-effect: non-scaling-stroke;
+}
+
+.instructions-image svg *.paper {
+    fill: var(--color-neon)
 }
