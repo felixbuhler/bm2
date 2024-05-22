@@ -85,6 +85,29 @@ h3 {
     background: var(--color-black-hover)
 }
 
+/* Header */
+
+header {
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: 100px;
+    padding: var(--padding) var(--gallery-gap);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-headline);
+}
+
+#bam-logo svg {
+    width: 50px;
+}
+
+#bam-logo svg * {
+    fill: var(--color-black);
+}
+
+/* Intro */
+
 #intro {
     width: 100vw;
     min-height: 100vh;
@@ -180,7 +203,7 @@ p.text-content svg {
 
 #posters h2 {
     position: sticky;
-    top: var(--gallery-gap);
+    top: calc(2*var(--padding) + var(--gallery-gap));
     z-index: 9;
 }
 
