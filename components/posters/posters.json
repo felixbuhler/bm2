@@ -1,0 +1,59 @@
+{
+  "posters": [
+    {
+      "emoji": "✊",
+      "imageUrl": "./components/posters/images/bm_faust.webp",
+      "downloadUrl": "google.com"
+    },
+    {
+      "emoji": "🧜‍♂️",
+      "imageUrl": "./components/posters/images/bm_wasserperson.webp",
+      "downloadUrl": "google.com"
+    },
+    {
+      "emoji": "💕",
+      "imageUrl": "./components/posters/images/bm_herzen.webp",
+      "downloadUrl": "google.com"
+    },
+    {
+      "emoji": "🦄",
+      "imageUrl": "./components/posters/images/bm_einhorn.webp",
+      "downloadUrl": "google.com"
+    },
+    {
+      "emoji": "🤝",
+      "imageUrl": "./components/posters/images/bm_handshake.webp",
+      "downloadUrl": "google.com"
+    },
+    {
+      "emoji": "👀",
+      "imageUrl": "./components/posters/images/bm_augen.webp",
+      "downloadUrl": "google.com"
+    },
+    {
+      "emoji": "🦄",
+      "imageUrl": "./components/posters/images/bm_einhorn.webp",
+      "downloadUrl": "google.com"
+    },
+    {
+      "emoji": "💥",
+      "imageUrl": "./components/posters/images/bm_bumm.webp",
+      "downloadUrl": "google.com"
+    },
+    {
+      "emoji": "🫶",
+      "imageUrl": "./components/posters/images/bm_handherz.webp",
+      "downloadUrl": "google.com"
+    },
+    {
+      "emoji": "🌈",
+      "imageUrl": "./components/posters/images/bm_regenbogen.webp",
+      "downloadUrl": "google.com"
+    },
+    {
+      "emoji": "🧠",
+      "imageUrl": "./components/posters/images/bm_hirn.webp",
+      "downloadUrl": "google.com"
+    }
+  ]
+}
